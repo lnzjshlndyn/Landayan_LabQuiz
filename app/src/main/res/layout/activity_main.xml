@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.landayan.landayan_labquiz.MainActivity"
+    android:background="@drawable/bg">
+
+    <TextView
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:text="Author:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="38dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="56dp"
+        android:id="@+id/textView" />
+
+    <EditText
+        android:textSize="15sp"
+        android:id="@+id/et_author"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:text="Quote:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_author"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginTop="28dp"
+        android:id="@+id/textView2" />
+    
+    <EditText
+        android:textColor="@color/white"
+        android:maxLines="8"
+        android:minLines="5"
+        android:lines="6"
+        android:inputType="textMultiLine"
+        android:textSize="15sp"
+        android:id="@+id/et_quote"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/et_author"
+        android:layout_alignStart="@+id/et_author" />
+
+    <Button
+        android:onClick="saveQuote"
+        android:id="@+id/btn_save"
+        android:text="save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et_quote"
+        android:layout_alignLeft="@+id/et_quote"
+        android:layout_alignStart="@+id/et_quote"
+        android:layout_marginTop="49dp" />
+
+    <Button
+        android:onClick="goNext"
+        android:id="@+id/btn_next"
+        android:text="next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_save"
+        android:layout_alignBottom="@+id/btn_save"
+        android:layout_alignRight="@+id/et_quote"
+        android:layout_alignEnd="@+id/et_quote" />
+
+
+</RelativeLayout>
